@@ -14,6 +14,19 @@ interface RectWithArea extends Rect {
   gerArea: () => number;
 }
 
+// имплементирование класса по интерфейсу
+interface IClock {
+  time: Date;
+  setTime(date: Date): void;
+}
+
+class Clock implements IClock {
+  time: Date = new Date();
+  setTime(date: Date): void {
+    this.time = date;
+  }
+}
+
 export const Interfaces: React.FC = () => {
   const rect1: Rect = {
     id: 'qwqwqw',
@@ -59,6 +72,8 @@ export const Interfaces: React.FC = () => {
       return this.size?.width * this.size?.height;
     },
   };
+
+  rect5.color = '#fff';
 
   return <h1>Interfaces</h1>;
 };

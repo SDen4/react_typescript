@@ -8,15 +8,32 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   const addHandler = (title: string) => {
-    console.log('add new todo', title);
-
     const newTodo: ITodo = {
       title: title,
       id: Date.now(),
       completed: false,
     };
-    // setTodos([newTodo, ...todos]);
     setTodos((prev) => [newTodo, ...prev]);
+  };
+
+  const toggleHandler = (id: number) => {
+    setTodos((prev) =>
+      prev.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+        return todo;
+      }),
+    );
+  };
+
+  const removeHandler = (id: number) => {
+    console.log(id);
+
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
   return (
@@ -25,7 +42,11 @@ const App: React.FC = () => {
       <div className="container">
         <TodoForm onAdd={addHandler} />
 
-        <TodoList todos={todos} />
+        <TodoList
+          todos={todos}
+          onRemove={removeHandler}
+          onToggle={toggleHandler}
+        />
       </div>
     </>
   );

@@ -27,6 +27,11 @@ class Clock implements IClock {
   }
 }
 
+// interface for many idential types of props
+interface IStyles {
+  [key: string]: string;
+}
+
 export const Interfaces: React.FC = () => {
   const rect1: Rect = {
     id: 'qwqwqw',
@@ -72,8 +77,16 @@ export const Interfaces: React.FC = () => {
       return this.size?.width * this.size?.height;
     },
   };
-
   rect5.color = '#fff';
+
+  // interface for many idential types of props
+  const style: IStyles = {
+    display: 'flex',
+    border: '1px solid #fff',
+    margin: '5px',
+    padding: '10px',
+  };
+  style.display = 'block';
 
   return <h1>Interfaces</h1>;
 };

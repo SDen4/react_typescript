@@ -40,6 +40,15 @@ export const Sample: React.FC = () => {
     throw new Error(message);
   }
 
+  // custom types
+  type Login = string;
+  const login: Login = 'login';
+
+  // custom some types
+  type Id = string | number;
+  const id1: Id = 'one';
+  const id2: Id = 2;
+
   return (
     <div className="types">
       <h1>Types</h1>
@@ -52,12 +61,11 @@ export const Sample: React.FC = () => {
       <span>{arrayNum2}</span>
       <span>{arrayStr}</span>
       <span>{arrayDif}</span>
-      <span>
-        {any}
-        {typeof any}
-      </span>
+      <span>{any + ' ' + typeof any}</span>
       <span>{name}</span>
       <span>{error}</span>
+      <span>{login}</span>
+      <span>{id1 + ' ' + id2}</span>
     </div>
   );
 };

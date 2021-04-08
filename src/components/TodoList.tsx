@@ -8,6 +8,10 @@ type Iprops = {
 };
 
 export const TodoList: React.FC<Iprops> = ({ todos, onToggle, onRemove }) => {
+  if (todos.length === 0) {
+    return <p className="center">Todo's list is empty, yet...</p>;
+  }
+
   return (
     <ul>
       {todos.map((todo) => {

@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => (
           <a href="/">About</a>
         </li>
         <li>
-          <a href="/">Info</a>
+          <a href="/">Todo list</a>
         </li>
       </ul>
     </div>

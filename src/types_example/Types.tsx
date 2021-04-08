@@ -49,6 +49,10 @@ export const Sample: React.FC = () => {
   const id1: Id = 'one';
   const id2: Id = 2;
 
+  // null and undefined
+  type someType = null | undefined;
+  const someT: someType = null;
+
   return (
     <div className="types">
       <h1>Types</h1>
@@ -66,6 +70,7 @@ export const Sample: React.FC = () => {
       <span>{error}</span>
       <span>{login}</span>
       <span>{id1 + ' ' + id2}</span>
+      <span>{someT}</span>
     </div>
   );
 };

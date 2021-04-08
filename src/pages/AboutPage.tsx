@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Sample } from '../types_example/Types';
+import { Enum } from '../types_example/Enum';
 
 export const AboutPage: React.FC = () => {
   const history = useHistory();
@@ -18,6 +19,7 @@ export const AboutPage: React.FC = () => {
         Return to todos list
       </button>
       <Sample />
+      <Enum />
     </>
   );
 };

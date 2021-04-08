@@ -42,3 +42,19 @@ code {
 .todo i {
   z-index: 2;
 }
+
+.types {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.types h1 {
+  margin-bottom: 2rem;
+}
+
+.types span {
+  font-size: 20px;
+  margin-bottom: 10px;
+}

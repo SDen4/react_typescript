@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Sample } from '../types_example/Types';
 
 export const AboutPage: React.FC = () => {
   const history = useHistory();
@@ -16,6 +17,7 @@ export const AboutPage: React.FC = () => {
       <button className="btn" onClick={() => history.push('/')}>
         Return to todos list
       </button>
+      <Sample />
     </>
   );
 };

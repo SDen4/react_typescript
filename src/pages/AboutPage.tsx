@@ -1,6 +1,9 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 export const AboutPage: React.FC = () => {
+  const history = useHistory();
+
   return (
     <>
       <h1>About page</h1>
@@ -10,7 +13,9 @@ export const AboutPage: React.FC = () => {
         cum rerum deserunt! Magni debitis consequatur eaque nostrum quia amet
         deserunt.
       </p>
-      <button className="btn">Return to todos list</button>
+      <button className="btn" onClick={() => history.push('/')}>
+        Return to todos list
+      </button>
     </>
   );
 };

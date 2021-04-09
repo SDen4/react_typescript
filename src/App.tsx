@@ -13,6 +13,15 @@ const App: React.FC = () => {
         <Switch>
           <Route component={TodosPage} path="/" exact />
           <Route component={AboutPage} path="/about" />
+
+          {/* 404 page */}
+          <Route
+            render={() => (
+              <h1 style={{ color: 'red', textAlign: 'center' }}>
+                404 not found
+              </h1>
+            )}
+          />
         </Switch>
       </div>
     </BrowserRouter>

@@ -4,7 +4,7 @@ interface Iprops {
   onAdd(title: string): void;
 }
 
-export const TodoForm: React.FC<Iprops> = (props) => {
+export const TodoForm: React.FC<Iprops> = (props): React.ReactElement => {
   // const [title, setTitle] = useState<string>('');
 
   const ref = useRef<HTMLInputElement>(null);

@@ -5,7 +5,7 @@ import { ITodo } from '../interfaces';
 import { TodoForm } from '../components/TodoForm';
 import { TodoList } from '../components/TodoList';
 
-export const TodosPage: React.FC = () => {
+export const TodosPage: React.FC = (): React.ReactElement => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   // get elements from localstorage

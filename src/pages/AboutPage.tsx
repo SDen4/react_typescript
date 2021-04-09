@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Sample } from '../types_example/Types';
 import { Generic } from '../types_example/Generis';
 
-export const AboutPage: React.FC = () => {
+export const AboutPage: React.FC = (): React.ReactElement => {
   const history = useHistory();
 
   return (

@@ -7,7 +7,11 @@ type Iprops = {
   onRemove(id: number): void;
 };
 
-export const TodoList: React.FC<Iprops> = ({ todos, onToggle, onRemove }) => {
+export const TodoList: React.FC<Iprops> = ({
+  todos,
+  onToggle,
+  onRemove,
+}): React.ReactElement => {
   if (todos.length === 0) {
     return <p className="center">Todo's list is empty, yet...</p>;
   }

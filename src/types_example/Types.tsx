@@ -31,14 +31,14 @@ export const Sample: React.FC = () => {
   any = 12;
 
   // функция, которая ничего не возвращает
-  function name(name: string): void {
-    name = name + ' ';
-  }
+  // function name(name: string): void {
+  //   name = name + ' ';
+  // }
 
   // never
-  function error(message: string): never {
-    throw new Error(message);
-  }
+  // function error(message: string): never {
+  //   throw new Error(message);
+  // }
 
   // custom types
   type Login = string;
@@ -69,8 +69,8 @@ export const Sample: React.FC = () => {
       <span>{arrayStr}</span>
       <span>{arrayDif}</span>
       <span>{any + ' ' + typeof any}</span>
-      <span>{name}</span>
-      <span>{error}</span>
+      {/* <span>{name}</span> */}
+      {/* <span>{error}</span> */}
       <span>{login}</span>
       <span>{id1 + ' ' + id2}</span>
       <span>{someT}</span>

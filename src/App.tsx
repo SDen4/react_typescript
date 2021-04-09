@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Navbar } from './components/Navbar';
 import { TodosPage } from './pages/TodosPage';
@@ -14,14 +14,17 @@ const App: React.FC = () => {
           <Route component={TodosPage} path="/" exact />
           <Route component={AboutPage} path="/about" />
 
+          {/* Redirect from any unknown paths to main */}
+          <Redirect to={'/'} />
+
           {/* 404 page */}
-          <Route
+          {/* <Route
             render={() => (
               <h1 style={{ color: 'red', textAlign: 'center' }}>
                 404 not found
               </h1>
             )}
-          />
+          /> */}
         </Switch>
       </div>
     </BrowserRouter>

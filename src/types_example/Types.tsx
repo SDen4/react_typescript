@@ -53,8 +53,11 @@ export const Sample: React.FC = () => {
   type someType = null | undefined;
   const someT: someType = null;
 
+  // css props
+  const styles: React.CSSProperties = { display: 'flex', marginBottom: '20px' };
+
   return (
-    <div className="types">
+    <div className="types" style={styles}>
       <h1>Types</h1>
       <span>{str}</span>
       <span>{`${isBoolean ? 'true' : 'false'}`}</span>

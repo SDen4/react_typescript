@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 
 type ComponentState = {
   count: number;
@@ -33,7 +33,7 @@ class ClassesTypes extends Component<ComponentState, ComponentProps> {
   //   return true;
   // }
 
-  render() {
+  render(): React.ReactElement<{ children: ReactNode }> {
     return <></>;
   }
 }

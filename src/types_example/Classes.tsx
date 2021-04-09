@@ -8,10 +8,31 @@ import React, { Component } from 'react';
 //   }
 // }
 // идентичная запись класса выше
-class Car {
-  readonly numOfWheels: number = 4;
-  constructor(readonly model: string) {}
+// class Car {
+//   readonly numOfWheels: number = 4;
+//   constructor(readonly model: string) {}
+// }
+
+// Модификаторы //
+class Animal {
+  protected voice: string = '';
+  public color: string = 'black'; // если не указывать, по умолчанию будет public
+  public go() {
+    console.log('Go!');
+  }
 }
+
+class Cat extends Animal {
+  public setVoice(voice: string): void {
+    this.voice = voice;
+  }
+}
+
+const cat = new Cat();
+cat.setVoice('mew-mew');
+cat.color = 'white';
+console.log(cat);
+// Модификаторы //
 
 export class Classes extends Component {
   return() {

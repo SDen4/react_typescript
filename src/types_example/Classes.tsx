@@ -34,6 +34,23 @@ cat.color = 'white';
 console.log(cat);
 // Модификаторы //
 
+// Абстрактные классы //
+abstract class Test {
+  abstract render(): void;
+  abstract info(): string;
+}
+
+class NewTest extends Test {
+  render(): void {
+    console.log('NewTest class');
+  }
+  info(): string {
+    return 'NewTest';
+  }
+}
+console.log(NewTest);
+// Абстрактные классы //
+
 export class Classes extends Component {
   return() {
     <h1>Classes</h1>;

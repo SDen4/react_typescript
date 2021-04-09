@@ -8,10 +8,12 @@ export const Navbar: React.FC = (): React.ReactElement => (
         React + Typescript
       </a>
       <ul className="right hide-on-med-and-down">
-        <li>
-          <NavLink to="/">Todo list</NavLink>
+        <li className="link1">
+          <NavLink to="/" exact>
+            Todo list
+          </NavLink>
         </li>
-        <li>
+        <li className="link1">
           <NavLink to="/about">About</NavLink>
         </li>
       </ul>

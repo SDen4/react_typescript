@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import HocExampleText from '../../components/hoc/HocExampleText';
 import { Button } from '../../components/ui/Button/Button';
 
 import styles from './AboutPage.module.css';
@@ -26,6 +27,7 @@ export const AboutPage: React.FC = (): React.ReactElement => {
       >
         Return to todos list
       </Button>
+      <HocExampleText />
     </>
   );
 };

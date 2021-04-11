@@ -5,6 +5,8 @@ import { ITodo } from '../interfaces';
 import { TodoForm } from '../components/TodoForm';
 import { TodoList } from '../components/TodoList';
 
+import axios from 'axios';
+
 export const TodosPage: React.FC = (): React.ReactElement => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
@@ -19,13 +21,23 @@ export const TodosPage: React.FC = (): React.ReactElement => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
-  const addHandler = (title: string) => {
+  const addHandler = async (title: string) => {
     const newTodo: ITodo = {
       title: title,
       id: Date.now(),
       completed: false,
     };
     setTodos((prev) => [newTodo, ...prev]);
+
+    try {
+      const response = await axios.post(
+        'https://react-ts-2c869-default-rtdb.firebaseio.com/todos.json',
+        newTodo,
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const toggleHandler = (id: number) => {

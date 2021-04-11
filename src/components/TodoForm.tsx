@@ -9,7 +9,6 @@ export const TodoForm: React.FC<Iprops> = (props): React.ReactElement => {
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
-    console.log(title);
   };
 
   const keyPressHandler = (event: React.KeyboardEvent) => {

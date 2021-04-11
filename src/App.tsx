@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Navbar } from './components/Navbar';
 import { TodosPage } from './pages/TodosPage';
-import { AboutPage } from './pages/AboutPage';
+import { AboutPage } from './pages/AboutPage/AboutPage';
 
 const App: React.FC = () => {
   return (

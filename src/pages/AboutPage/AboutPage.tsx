@@ -1,5 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Button } from '../../components/ui/Button/Button';
+
+import styles from './AboutPage.module.css';
 
 export const AboutPage: React.FC = (): React.ReactElement => {
   const history = useHistory();
@@ -13,9 +16,16 @@ export const AboutPage: React.FC = (): React.ReactElement => {
         cum rerum deserunt! Magni debitis consequatur eaque nostrum quia amet
         deserunt.
       </p>
-      <button className="btn" onClick={() => history.push('/')}>
+      {/* <button className="btn" onClick={() => history.push('/')}>
         Return to todos list
-      </button>
+      </button> */}
+      <Button
+        typeButton="button"
+        onClick={() => history.push('/')}
+        btnAddClass={styles.additionalBtnClass}
+      >
+        Return to todos list
+      </Button>
     </>
   );
 };

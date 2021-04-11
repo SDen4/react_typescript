@@ -16,6 +16,9 @@ export const Navbar: React.FC = (): React.ReactElement => (
         <li className="link1">
           <NavLink to="/about">About</NavLink>
         </li>
+        <li className="link1">
+          <NavLink to="/server">Server</NavLink>
+        </li>
       </ul>
     </div>
   </nav>

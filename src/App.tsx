@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Navbar } from './components/Navbar';
+import ServerTest from './components/ServerTest';
+
 import { TodosPage } from './pages/TodosPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
 
@@ -13,6 +15,7 @@ const App: React.FC = () => {
         <Switch>
           <Route component={TodosPage} path="/" exact />
           <Route component={AboutPage} path="/about" />
+          <Route component={ServerTest} path="/server" />
 
           {/* Redirect from any unknown paths to main */}
           <Redirect to={'/'} />

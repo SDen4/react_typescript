@@ -1,6 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 import Loader from '../Loader/Loader';
+
+import axios from '../../../axios/axios';
 
 export default class ServerTest extends React.Component {
   state = {
@@ -10,14 +11,12 @@ export default class ServerTest extends React.Component {
 
   async componentDidMount() {
     try {
-      await axios
-        .get('https://react-ts-2c869-default-rtdb.firebaseio.com/todos.json')
-        .then((response) => {
-          this.setState(() => ({
-            dataFromServer: Object.values(response.data),
-            loading: false,
-          }));
-        });
+      await axios.get('/todos.json').then((response) => {
+        this.setState(() => ({
+          dataFromServer: Object.values(response.data),
+          loading: false,
+        }));
+      });
     } catch (error) {
       console.log(error);
     }

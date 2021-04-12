@@ -5,7 +5,7 @@ import { ITodo } from '../interfaces';
 import { TodoForm } from '../components/TodoForm';
 import { TodoList } from '../components/TodoList';
 
-import axios from 'axios';
+import axios from '../axios/axios';
 
 export const TodosPage: React.FC = (): React.ReactElement => {
   const [todos, setTodos] = useState<ITodo[]>([]);
@@ -30,10 +30,7 @@ export const TodosPage: React.FC = (): React.ReactElement => {
     setTodos((prev) => [newTodo, ...prev]);
 
     try {
-      const response = await axios.post(
-        'https://react-ts-2c869-default-rtdb.firebaseio.com/todos.json',
-        newTodo,
-      );
+      const response = await axios.post('/todos.json', newTodo);
       console.log(response.data);
     } catch (error) {
       console.log(error);

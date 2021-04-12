@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import Loader from '../Loader/Loader';
 
 export default class ServerTest extends React.Component {
   state = {
     dataFromServer: [],
+    loading: true,
   };
 
   async componentDidMount() {
@@ -13,6 +15,7 @@ export default class ServerTest extends React.Component {
         .then((response) => {
           this.setState(() => ({
             dataFromServer: Object.values(response.data),
+            loading: false,
           }));
         });
     } catch (error) {
@@ -25,15 +28,19 @@ export default class ServerTest extends React.Component {
     return (
       <>
         <h1>Server Test</h1>
-        {data.map((item) => {
-          const { id, title, completed } = item;
-          return (
-            <div key={id}>
-              <h5>{title}</h5>
-              <span>Completed: {completed ? 'true' : 'false'}</span>
-            </div>
-          );
-        })}
+        {this.state.loading ? (
+          <Loader />
+        ) : (
+          data.map((item) => {
+            const { id, title, completed } = item;
+            return (
+              <div key={id}>
+                <h5>{title}</h5>
+                <span>Completed: {completed ? 'true' : 'false'}</span>
+              </div>
+            );
+          })
+        )}
       </>
     );
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Navbar } from './components/Navbar';
-import ServerTest from './components/ServerTest';
+import ServerTest from './components/ui/ServerTest/ServerTest';
 
 import { TodosPage } from './pages/TodosPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';

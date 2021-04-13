@@ -1,11 +1,8 @@
 import React from 'react';
-import Loader from '../ui/Loader/Loader';
-
 import { connect } from 'react-redux';
-
 import { fetchTodos } from '../../redux/actions/todos';
 
-// import axios from '../../axios/axios';
+import Loader from '../ui/Loader/Loader';
 
 interface IProps {
   todos: any;
@@ -19,11 +16,10 @@ class ServerTest extends React.Component<IProps> {
   }
 
   render() {
-    // const data = this.state.dataFromServer;
     const data = this.props.todos;
     return (
       <>
-        <h1>Redux Test</h1>
+        <h1>Redux+Server Test</h1>
         {this.props.loading ? (
           <Loader />
         ) : (

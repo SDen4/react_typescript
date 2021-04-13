@@ -7,23 +7,19 @@ type Iprops = {
   onRemove(id: number): void;
 };
 
-export const TodoList: React.FC<Iprops> = ({
-  todos,
-  onToggle,
-  onRemove,
-}): React.ReactElement => {
-  if (todos.length === 0) {
+export const TodoList: React.FC<Iprops> = (props): React.ReactElement => {
+  if (props.todos.length === 0) {
     return <p className="center">Todo's list is empty, yet...</p>;
   }
 
   const removeHandler = (event: React.MouseEvent, id: number) => {
     event.preventDefault();
-    onRemove(id);
+    props.onRemove(id);
   };
 
   return (
     <ul>
-      {todos.map((todo) => {
+      {props.todos.map((todo) => {
         const classes = ['todo'];
         if (todo.completed) {
           classes.push('completed');
@@ -34,7 +30,7 @@ export const TodoList: React.FC<Iprops> = ({
               <input
                 type="checkbox"
                 checked={todo.completed}
-                onChange={onToggle.bind(null, todo.id)}
+                onChange={props.onToggle.bind(null, todo.id)}
               />
               <span>{todo.title}</span>
               <i
@@ -50,3 +46,5 @@ export const TodoList: React.FC<Iprops> = ({
     </ul>
   );
 };
+
+export default TodoList;

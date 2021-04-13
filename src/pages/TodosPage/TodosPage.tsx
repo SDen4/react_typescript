@@ -5,8 +5,6 @@ import { ITodo } from '../../interfaces';
 import { TodoForm } from '../../components/TodoForm';
 import { TodoList } from '../../components/TodoList';
 
-import { connect } from 'react-redux';
-
 import axios from '../../axios/axios';
 
 const TodosPage: React.FC = (props): React.ReactElement => {
@@ -72,10 +70,4 @@ const TodosPage: React.FC = (props): React.ReactElement => {
   );
 };
 
-function mapStateToProps(state: any) {
-  return {
-    todos: state.todos,
-  };
-}
-
-export default connect(mapStateToProps)(TodosPage);
+export default TodosPage;

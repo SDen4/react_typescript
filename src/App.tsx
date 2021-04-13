@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Navbar } from './components/Navbar';
 import ServerTest from './components/ServerTest/ServerTest';
+import ReduxTest from './components/ReduxTest/ReduxTest';
 
 import TodosPage from './pages/TodosPage/TodosPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Route component={TodosPage} path="/" exact />
           <Route component={AboutPage} path="/about" />
           <Route component={ServerTest} path="/server" />
+          <Route component={ReduxTest} path="/redux" />
 
           {/* Redirect from any unknown paths to main */}
           <Redirect to={'/'} />

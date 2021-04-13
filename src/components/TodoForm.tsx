@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface Iprops {
   onAdd(title: string): void;
@@ -6,6 +6,13 @@ interface Iprops {
 
 export const TodoForm: React.FC<Iprops> = (props): React.ReactElement => {
   const [title, setTitle] = useState<string>('');
+
+  // focus on input //
+  const ref: any = useRef();
+  useEffect(() => {
+    ref.current.focus();
+  }, []);
+  // focus on input //
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
@@ -24,6 +31,7 @@ export const TodoForm: React.FC<Iprops> = (props): React.ReactElement => {
   return (
     <div className="input-field mt2">
       <input
+        ref={ref}
         value={title}
         type="text"
         id="title"

@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { Navbar } from './components/Navbar';
-import ServerTest from './components/ui/ServerTest/ServerTest';
+import ServerTest from './components/ServerTest/ServerTest';
 
-import { TodosPage } from './pages/TodosPage';
+import TodosPage from './pages/TodosPage/TodosPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
 
 const App: React.FC = () => {

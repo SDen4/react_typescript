@@ -1,7 +1,7 @@
 import React from 'react';
-import Loader from '../Loader/Loader';
+import Loader from '../ui/Loader/Loader';
 
-import axios from '../../../axios/axios';
+import axios from '../../axios/axios';
 
 export default class ServerTest extends React.Component {
   state = {

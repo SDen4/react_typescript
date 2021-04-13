@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-import { ITodo } from '../interfaces';
+import { ITodo } from '../../interfaces';
 
-import { TodoForm } from '../components/TodoForm';
-import { TodoList } from '../components/TodoList';
+import { TodoForm } from '../../components/TodoForm';
+import { TodoList } from '../../components/TodoList';
 
-import axios from '../axios/axios';
+import { connect } from 'react-redux';
 
-export const TodosPage: React.FC = (): React.ReactElement => {
+import axios from '../../axios/axios';
+
+const TodosPage: React.FC = (props): React.ReactElement => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   // get elements from localstorage
@@ -30,8 +32,7 @@ export const TodosPage: React.FC = (): React.ReactElement => {
     setTodos((prev) => [newTodo, ...prev]);
 
     try {
-      const response = await axios.post('/todos.json', newTodo);
-      console.log(response.data);
+      await axios.post('/todos.json', newTodo);
     } catch (error) {
       console.log(error);
     }
@@ -70,3 +71,11 @@ export const TodosPage: React.FC = (): React.ReactElement => {
     </>
   );
 };
+
+function mapStateToProps(state: any) {
+  return {
+    todos: state.todos,
+  };
+}
+
+export default connect(mapStateToProps)(TodosPage);

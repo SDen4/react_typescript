@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Transition } from 'react-transition-group';
 
 import styles from './Animation.module.css';
 
@@ -16,9 +17,9 @@ const Animation: React.FC = () => {
         Animate
       </button>
 
-      {state && (
+      <Transition in={state} timeout={1000}>
         <div className={`${state && styles.animation} ${styles.block}`} />
-      )}
+      </Transition>
     </div>
   );
 };

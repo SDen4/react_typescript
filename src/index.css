@@ -63,3 +63,33 @@ code {
   font-weight: 600 !important;
   color: red;
 }
+
+/* animation */
+.entering {
+  animation: anime 1000ms ease-out forwards;
+}
+.exiting {
+  animation: anime 500ms ease-out alternate-reverse;
+}
+.exited {
+  opacity: 0;
+  transform: translateY(-500px);
+  display: none;
+}
+@keyframes anime {
+  0% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* animation */

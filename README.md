@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deploy in firebase
 
-You con open and test this app [here](https://react-ts-2c869.firebaseapp.com/).
+You can open and test this app [here](https://react-ts-2c869.firebaseapp.com/).
 
 ## Available Scripts
 

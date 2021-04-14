@@ -9,13 +9,11 @@ import TodoList from '../../components/TodoList';
 configure({ adapter: new Adapter() });
 const wrapper = shallow(<TodosPage />);
 
-describe('TodosPage -> Input', () => {
+describe('TodosPage', () => {
   it('TodosPage should contain one TodoForm component', () => {
     expect(wrapper.find(TodoForm)).toHaveLength(1);
   });
-});
 
-describe('TodosPage -> List', () => {
   it('TodosPage should contain one TodoList component', () => {
     expect(wrapper.find(TodoList)).toHaveLength(1);
   });

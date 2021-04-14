@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@types/enzyme": "^3.10.8"
+    "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6"
   }
 }

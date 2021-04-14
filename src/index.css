@@ -74,7 +74,6 @@ code {
 .exited {
   opacity: 0;
   transform: translateY(-500px);
-  display: none;
 }
 @keyframes anime {
   0% {
@@ -93,3 +92,23 @@ code {
   }
 }
 /* animation */
+
+/* animation ORANGE*/
+.animationOrange-enter {
+  opacity: 0;
+}
+.animationOrange-enter-active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.animationOrange-exit {
+  opacity: 1;
+}
+.animationOrange-exit-active {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.animationOrange-exit-done {
+  opacity: 0;
+}
+/* animation ORANGE*/

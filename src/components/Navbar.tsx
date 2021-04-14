@@ -22,6 +22,9 @@ export const Navbar: React.FC = (): React.ReactElement => (
         <li className="link1">
           <NavLink to="/redux">Redux</NavLink>
         </li>
+        <li className="link1">
+          <NavLink to="/animation">Animation</NavLink>
+        </li>
       </ul>
     </div>
   </nav>

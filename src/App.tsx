@@ -7,6 +7,7 @@ import ReduxTest from './components/ReduxTest/ReduxTest';
 
 import TodosPage from './pages/TodosPage/TodosPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
+import Animation from './components/Animation/Animation';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route component={AboutPage} path="/about" />
           <Route component={ServerTest} path="/server" />
           <Route component={ReduxTest} path="/redux" />
+          <Route component={Animation} path="/animation" />
 
           {/* Redirect from any unknown paths to main */}
           <Redirect to={'/'} />

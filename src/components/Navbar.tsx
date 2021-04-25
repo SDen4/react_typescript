@@ -25,6 +25,9 @@ export const Navbar: React.FC = (): React.ReactElement => (
         <li className="link1">
           <NavLink to="/animation">Animation</NavLink>
         </li>
+        <li className="link1">
+          <NavLink to="/table">Table</NavLink>
+        </li>
       </ul>
     </div>
   </nav>

@@ -19,7 +19,7 @@ class ServerTest extends React.Component<IProps> {
     const data = this.props.todos;
     return (
       <>
-        <h1>Redux+Server Test</h1>
+        <h1>Redux+Server+Saga Test</h1>
         {this.props.loading ? (
           <Loader />
         ) : (

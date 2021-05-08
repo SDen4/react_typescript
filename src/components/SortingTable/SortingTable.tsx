@@ -3,9 +3,9 @@ import { useTable } from 'react-table';
 import MOCK_DATA from '../../mockData/MOCK_DATA.json';
 import { GROUP_COLUMNS } from '../../mockData/columns';
 
-import './BasicTable.module.css';
+import './SortingTable.module.css';
 
-const BasicTable = () => {
+const SortingTable = () => {
   const columns = useMemo(() => GROUP_COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
 
@@ -63,4 +63,4 @@ const BasicTable = () => {
   );
 };
 
-export default BasicTable;
+export default SortingTable;

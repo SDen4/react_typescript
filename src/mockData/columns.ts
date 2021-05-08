@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 export const COLUMNS: Array<any> = [
   { Header: 'Id', Footer: 'Id', accessor: 'id' },
   { Header: 'First name', Footer: 'First name', accessor: 'first_name' },
@@ -6,6 +8,9 @@ export const COLUMNS: Array<any> = [
     Header: 'Date of birth',
     Footer: 'Date of birth',
     accessor: 'date_of_birth',
+    Cell: ({ value }: any) => {
+      return format(new Date(value), 'dd/MM/yyyy');
+    },
   },
   { Header: 'Country', Footer: 'Country', accessor: 'country' },
   { Header: 'Phone', Footer: 'Phone', accessor: 'phone' },
@@ -29,6 +34,9 @@ export const GROUP_COLUMNS: Array<any> = [
         Header: 'Date of birth',
         Footer: 'Date of birth',
         accessor: 'date_of_birth',
+        Cell: ({ value }: any) => {
+          return format(new Date(value), 'dd/MM/yyyy');
+        },
       },
       { Header: 'Country', Footer: 'Country', accessor: 'country' },
       { Header: 'Phone', Footer: 'Phone', accessor: 'phone' },

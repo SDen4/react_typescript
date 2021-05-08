@@ -1,5 +1,5 @@
 import React from 'react';
-import BasicTable from '../../components/Table/BasicTable';
+import BasicTable from '../../components/BasicTable/BasicTable';
 
 // import styles from './TablePage.module.css';
 

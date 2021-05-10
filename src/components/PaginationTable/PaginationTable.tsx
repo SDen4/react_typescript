@@ -28,6 +28,8 @@ const PaginationTable = () => {
     canPreviousPage,
     pageOptions,
     state,
+    gotoPage,
+    pageCount,
     prepareRow,
   } = tableInstance;
 
@@ -61,6 +63,10 @@ const PaginationTable = () => {
         </tbody>
       </table>
       <div>
+        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+          {'<<'}
+        </button>
+
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           Previous
         </button>
@@ -75,6 +81,10 @@ const PaginationTable = () => {
 
         <button onClick={() => nextPage()} disabled={!canNextPage}>
           Next
+        </button>
+
+        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+          {'>>'}
         </button>
       </div>
     </div>

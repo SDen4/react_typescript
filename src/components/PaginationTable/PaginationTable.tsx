@@ -86,6 +86,22 @@ const PaginationTable = () => {
         <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
           {'>>'}
         </button>
+
+        <span>
+          {' '}
+          Go to the page:{' '}
+          <input
+            type="number"
+            defaultValue={pageIndex + 1}
+            onChange={(event) => {
+              const pageNumber = event.target.value
+                ? Number(event.target.value) - 1
+                : 0;
+              gotoPage(pageNumber);
+            }}
+            style={{ width: '50px' }}
+          />
+        </span>
       </div>
     </div>
   );

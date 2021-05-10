@@ -4,11 +4,12 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import ServerTest from './components/ServerTest/ServerTest';
 import ReduxTest from './components/ReduxTest/ReduxTest';
+import Animation from './components/Animation/Animation';
 
 import TodosPage from './pages/TodosPage/TodosPage';
 import TablePage from './pages/TablePage/TablePage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
-import Animation from './components/Animation/Animation';
+import PaginationTablePage from './pages/PaginationTablePage/PaginationTablePage';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
           <Route component={ReduxTest} path="/redux" />
           <Route component={Animation} path="/animation" />
           <Route component={TablePage} path="/table" />
+          <Route component={PaginationTablePage} path="/paginationtable" />
 
           {/* Redirect from any unknown paths to main */}
           <Redirect to={'/'} />

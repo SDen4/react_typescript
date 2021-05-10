@@ -13,6 +13,7 @@ const PaginationTable = () => {
     {
       columns,
       data,
+      initialState: { pageIndex: 5 },
     },
     usePagination,
   );

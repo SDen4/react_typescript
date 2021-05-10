@@ -2,7 +2,13 @@ import { format } from 'date-fns';
 import { ColumnFilter } from '../components/ColumnFilterTable/ColumnFilter';
 
 export const COLUMNS: Array<any> = [
-  { Header: 'Id', Footer: 'Id', accessor: 'id', Filter: ColumnFilter },
+  {
+    Header: 'Id',
+    Footer: 'Id',
+    accessor: 'id',
+    Filter: ColumnFilter,
+    disableFilters: true,
+  },
   {
     Header: 'First name',
     Footer: 'First name',
@@ -23,6 +29,7 @@ export const COLUMNS: Array<any> = [
       return format(new Date(value), 'dd/MM/yyyy');
     },
     Filter: ColumnFilter,
+    disableFilters: true,
   },
   {
     Header: 'Country',

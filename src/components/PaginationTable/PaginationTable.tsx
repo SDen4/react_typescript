@@ -26,8 +26,12 @@ const PaginationTable = () => {
     previousPage,
     canNextPage,
     canPreviousPage,
+    pageOptions,
+    state,
     prepareRow,
   } = tableInstance;
+
+  const { pageIndex } = state;
 
   return (
     <div>
@@ -60,6 +64,15 @@ const PaginationTable = () => {
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           Previous
         </button>
+
+        <span>
+          {' '}
+          Page{' '}
+          <strong>
+            {pageIndex + 1} of {pageOptions.length}
+          </strong>{' '}
+        </span>
+
         <button onClick={() => nextPage()} disabled={!canNextPage}>
           Next
         </button>
